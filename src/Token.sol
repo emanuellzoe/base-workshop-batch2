@@ -2,9 +2,14 @@
 pragma solidity ^0.8.30;
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
+
+
 contract Token is ERC20 {
     //constructor == function
     //constructor function yang dieksekusi pertama kali saat contract di deploy
+
+    //mint = buat token baru
+    //burn = hancurkan token yang sudah ada, untuk mengurangi jumlah token yang beredar
     constructor() ERC20("Tegel", "TGL"){}
 
     //function a
@@ -19,6 +24,8 @@ contract Token is ERC20 {
 
     //solidity tidak membaca angka koma desimal
     //setiap token memiliki jumlah desimal yang berbeda-beda
+    //default OpenZeppelin adalah 18
+    //functioin decimals jika public baru bisa dicheck menggunakan website seperti etherscan
     function decimals() public pure override returns (uint8) {
         return 19;
     }
