@@ -46,4 +46,5 @@ contract TokenTest is Test {
         console.log("Alice balance:", token.balanceOf(alice));
         console.log("Bob balance:", token.balanceOf(bob));
     }
+    
 }
